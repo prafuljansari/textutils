@@ -21,10 +21,8 @@ export default function TextForm(props) {
             props.showAlert("No text to copy", "danger");
         }else {
             navigator.clipboard.writeText(text).then(()=>{
-                alert('Text Copied');
                 props.showAlert("Text copied", "success");
             }).catch(()=>{
-                alert('Something Went Wrong!');
                 props.showAlert("Something went wrong", "danger");
             });
             
